@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yeppiee for Partners · Get your kids' program listed</title>
+<meta name="description" content="Run a kids' program in the GTA? Get listed free. Parents tell Yeppiee what their kids want to learn, and verified partners get recommended first.">
+<meta property="og:title" content="Yeppiee for Partners · Get listed free">
+<meta property="og:description" content="Parents tell us what their kids want to learn. Verified partners get recommended first, with their prices, schedule and offers.">
+<meta property="og:url" content="https://yeppiee.com/partners/">
+<meta name="theme-color" content="#FFD447">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FFD447'/%3E%3Ctext x='32' y='45' font-family='Arial Rounded MT Bold,Arial,sans-serif' font-size='40' font-weight='800' text-anchor='middle' fill='%231B2A4A'%3Ey%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1B2A4A;
+    --ink-soft: #4A5876;
+    --sun: #FFD447;
+    --sun-deep: #F5BF14;
+    --paper: #FFFFFF;
+    --cobalt: #2F54EB;
+    --cobalt-dark: #2143C9;
+    --mist: #F3F6FB;
+    --line: #D5DCE8;
+    --error: #C62F2F;
+    --pink: #FFD6E7;
+    --mint: #C9F2DC;
+    --lilac: #E3DAFF;
+    --peach: #FFE2C6;
+    --sky: #D3ECFF;
+    --radius-card: 28px;
+    --radius-field: 12px;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  a { color: var(--cobalt); }
+  :focus-visible { outline: 3px solid var(--cobalt); outline-offset: 2px; }
+
+  /* ---------- Top band ---------- */
+  .band {
+    background: var(--sun);
+    padding: 22px 16px 28px;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+
+  .wordmark {
+    font-family: "Baloo 2", system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .wordmark .dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--cobalt);
+    display: inline-block;
+    transform: translateY(-6px);
+  }
+
+  /* ---------- Main grid ---------- */
+  .main {
+    background: var(--sun);
+    padding: 8px 16px 72px;
+    margin-bottom: 56px;
+  }
+  .grid {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .intro { padding-top: 0; }
+  .intro h1 {
+    font-family: "Baloo 2", system-ui, sans-serif;
+    font-weight: 800;
+    font-size: clamp(36px, 7vw, 58px);
+    line-height: 1.02;
+    letter-spacing: -1px;
+    margin: 0 0 16px;
+    max-width: 14ch;
+  }
+  .intro .lede {
+    font-size: 19px;
+    color: var(--ink);
+    max-width: 38ch;
+    margin: 0 0 28px;
+  }
+
+  .steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+    max-width: 44ch;
+  }
+  .steps li {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .steps .n {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--ink); color: var(--sun);
+    font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 20px;
+    display: grid; place-items: center;
+    line-height: 1;
+  }
+  .steps strong { display: block; font-weight: 700; }
+  .steps span { color: var(--ink-soft); font-size: 16px; }
+
+  /* ---------- Form card ---------- */
+  .card {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    border-radius: var(--radius-card);
+    padding: 28px 20px;
+    box-shadow: 8px 8px 0 var(--ink);
+  }
+  .card h2 {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.1;
+    margin: 0 0 4px;
+  }
+  .card .sub { margin: 0 0 24px; color: var(--ink-soft); font-size: 16px; }
+
+  fieldset { border: 0; padding: 0; margin: 0 0 22px; min-width: 0; }
+  legend, .label {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+    padding: 0;
+  }
+  .hint { font-weight: 400; color: var(--ink-soft); font-size: 14px; }
+  .field { margin-bottom: 22px; }
+
+  .row2 { display: grid; grid-template-columns: 1fr; gap: 0 16px; }
+
+  input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    font: inherit;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--mist);
+    border: 2px solid var(--line);
+    border-radius: var(--radius-field);
+    padding: 12px 14px;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%231B2A4A' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+  }
+  textarea { min-height: 96px; resize: vertical; }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--cobalt);
+    background-color: var(--paper);
+  }
+  .invalid input, .invalid select, .invalid textarea { border-color: var(--error); }
+  .err {
+    display: none;
+    color: var(--error);
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 6px;
+  }
+  .invalid .err { display: block; }
+
+  /* ---------- Sticker chips (the signature bit) ---------- */
+  .stickers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .sticker { position: relative; }
+  .sticker input {
+    position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none;
+  }
+  .sticker label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 15px 9px 12px;
+    border-radius: 999px;
+    border: 2px dashed var(--ink-soft);
+    background: var(--paper);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform .15s ease, background-color .15s ease, border-color .15s ease, box-shadow .15s ease;
+  }
+  .sticker .emoji { font-size: 18px; line-height: 1; }
+  .sticker .tick {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--ink);
+    display: none; place-items: center;
+    flex: none;
+  }
+  .sticker input:checked + label {
+    border-style: solid;
+    border-color: var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+    background: var(--c, var(--sky));
+  }
+  .sticker:nth-child(odd) input:checked + label { transform: rotate(-2deg); }
+  .sticker:nth-child(even) input:checked + label { transform: rotate(1.5deg); }
+  .sticker input:checked + label .tick { display: grid; }
+  .sticker input:focus-visible + label { outline: 3px solid var(--cobalt); outline-offset: 2px; }
+  .sticker label:hover { border-color: var(--ink); }
+
+  /* ---------- Kids ---------- */
+  .kid { position: relative; border: 0; padding: 0; margin: 0 0 8px; min-width: 0; }
+  .kid + .kid { border-top: 2px dashed var(--line); padding-top: 22px; margin-top: 6px; }
+  .kid-title {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0 0 12px;
+    float: left;          /* renders the legend as normal content, below the divider */
+    width: 100%;
+    padding-right: 90px;  /* room for the Remove button */
+  }
+  .kid > .row2 { clear: both; }
+  .kid-remove {
+    position: absolute; right: 0; top: 0;
+    font: inherit; font-size: 14px; font-weight: 600;
+    color: var(--ink-soft); background: none; border: 0; padding: 4px 0;
+    text-decoration: underline; cursor: pointer;
+  }
+  .kid + .kid .kid-remove { top: 26px; }
+  .kid-remove:hover { color: var(--error); }
+  .kid-remove[hidden] { display: none; }
+
+  .add-kid {
+    width: 100%;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    font: inherit; font-weight: 700; font-size: 17px; color: var(--ink);
+    background: var(--sun);
+    border: 2px dashed var(--ink);
+    border-radius: 999px;
+    padding: 12px 20px;
+    margin: 4px 0 30px;
+    cursor: pointer;
+    transition: background-color .15s ease;
+  }
+  .add-kid:hover { background: var(--sun-deep); }
+  .add-kid .plus {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--ink); color: var(--sun);
+    display: grid; place-items: center;
+    font-size: 20px; line-height: 1; font-weight: 800;
+  }
+  .add-kid[hidden] { display: none; }
+  .add-kid-limit { font-size: 14px; color: var(--ink-soft); margin: 4px 0 30px; display: none; }
+  .add-kid-limit.show { display: block; }
+
+  .group-title {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+    padding-top: 22px;
+    border-top: 2px solid var(--ink);
+  }
+
+  .other-box { margin-top: 12px; display: none; }
+  .other-box.show { display: block; }
+
+  /* simple checkbox rows (times) */
+  .checks { display: flex; flex-wrap: wrap; gap: 10px 20px; }
+  .check { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; cursor: pointer; }
+  .check input, .consent input {
+    width: 20px; height: 20px; accent-color: var(--cobalt); margin: 0; flex: none;
+  }
+
+  .consent {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 12px;
+    align-items: start;
+    background: var(--mist);
+    border-radius: var(--radius-field);
+    padding: 14px;
+    font-size: 15px;
+  }
+  .consent input { margin-top: 3px; }
+
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  .submit {
+    width: 100%;
+    margin-top: 8px;
+    font: inherit;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    background: var(--cobalt);
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    padding: 15px 24px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform .1s ease, box-shadow .1s ease, background-color .15s ease;
+  }
+  .submit:hover { background: var(--cobalt-dark); }
+  .submit:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+  .submit[disabled] { opacity: .7; cursor: progress; }
+
+  .form-msg {
+    margin-top: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--error);
+    display: none;
+  }
+  .form-msg.show { display: block; }
+
+  /* ---------- Success state ---------- */
+  .done { display: none; text-align: left; }
+  .done.show { display: block; }
+  .done .badge {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: var(--mint); border: 2px solid var(--ink);
+    display: grid; place-items: center; margin-bottom: 16px;
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  .done h2 { margin-bottom: 8px; }
+  .done p { margin: 0 0 12px; }
+  .linkbtn {
+    font: inherit; font-weight: 700; color: var(--cobalt);
+    background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline;
+  }
+
+  /* ---------- Privacy + footer ---------- */
+  .privacy {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 16px 56px;
+  }
+  .privacy-inner {
+    display: grid;
+    gap: 20px;
+  }
+  .privacy h3 {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    margin: 0;
+  }
+  .privacy ul { margin: 0; padding-left: 20px; color: var(--ink-soft); max-width: 70ch; }
+  .privacy li { margin-bottom: 6px; }
+
+  footer {
+    background: var(--ink);
+    color: #fff;
+    padding: 28px 16px;
+    font-size: 15px;
+  }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer a { color: var(--sun); }
+
+  /* ---------- Larger screens ---------- */
+  @media (min-width: 620px) {
+    .card { padding: 36px 36px; }
+    .row2 { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 960px) {
+    .band { padding: 28px 16px 36px; }
+    .main { padding-top: 16px; padding-bottom: 96px; }
+    .grid { grid-template-columns: 1fr 560px; gap: 56px; align-items: start; }
+    .intro { padding-top: 8px; position: sticky; top: 24px; }
+    .privacy-inner { grid-template-columns: 1fr 2fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+    .sticker input:checked + label { transform: none !important; }
+  }
+
+  /* ---------- Partners page extras ---------- */
+  .perks {
+    list-style: none;
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    border-radius: 18px;
+    box-shadow: 5px 5px 0 var(--ink);
+    display: grid;
+    gap: 10px;
+    max-width: 44ch;
+  }
+  .perks li {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 10px;
+    align-items: start;
+    font-size: 16px;
+  }
+  .perks .pk {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mint); border: 2px solid var(--ink);
+    display: grid; place-items: center; flex: none;
+    margin-top: 1px;
+  }
+  .perks .pk svg { display: block; }
+  .perks-title {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0 0 2px;
+  }
+</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="wrap">
+    <a class="wordmark" href="/" aria-label="Yeppiee home">yeppiee<span class="dot" aria-hidden="true"></span></a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="grid">
+
+    <section class="intro" aria-labelledby="hero-title">
+      <h1 id="hero-title">Fill your classes with families nearby.</h1>
+      <p class="lede">Parents across the GTA tell Yeppiee what their kids want to learn. We match them with local programs we trust. Free while we're in pilot.</p>
+
+      <ol class="steps" aria-label="How it works">
+        <li><span class="n" aria-hidden="true">1</span><div><strong>Tell us about your programs</strong><span>About 3 minutes. Prices and schedules make you easy to recommend.</span></div></li>
+        <li><span class="n" aria-hidden="true">2</span><div><strong>Parents ask, we match</strong><span>Your verified details are checked first, before anything we find on the web.</span></div></li>
+        <li><span class="n" aria-hidden="true">3</span><div><strong>Families reach you</strong><span>Parents get your phone, address and prices in their shortlist, with your offer highlighted.</span></div></li>
+      </ol>
+
+      <ul class="perks" aria-label="What partners get">
+        <li style="display:block"><p class="perks-title">What you get</p></li>
+        <li><span class="pk" aria-hidden="true"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#1B2A4A" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></span><span>Free during the pilot. No commission, no listing fee.</span></li>
+        <li><span class="pk" aria-hidden="true"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#1B2A4A" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></span><span>Recommended first: verified partners come before web results.</span></li>
+        <li><span class="pk" aria-hidden="true"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#1B2A4A" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></span><span>Fill last-minute openings when a parent needs a class soon.</span></li>
+        <li><span class="pk" aria-hidden="true"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#1B2A4A" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></span><span>Your trial offers and sibling discounts highlighted to parents.</span></li>
+        <li><span class="pk" aria-hidden="true"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#1B2A4A" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></span><span>Update your listing anytime: just email us the change.</span></li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="form-title">
+
+      <form id="partner-form" novalidate>
+        <h2 id="form-title">Get listed. It's free.</h2>
+        <p class="sub">We review every application before it goes live. Fields marked optional can be skipped.</p>
+
+        <div class="field" data-field="business">
+          <label class="label" for="business">Business or program name</label>
+          <input type="text" id="business" name="business" maxlength="80" required>
+          <div class="err">Add your business or program name.</div>
+        </div>
+
+        <fieldset class="field" data-field="categories">
+          <legend>What do you offer? <span class="hint">Pick as many as apply.</span></legend>
+          <div class="stickers" id="cat-stickers"></div>
+          <div class="other-box" id="other-box">
+            <label class="label" for="other_category">What else do you offer?</label>
+            <input type="text" id="other_category" name="other_category" maxlength="60" placeholder="e.g. chess, theatre, cooking">
+          </div>
+          <div class="err">Pick at least one category.</div>
+        </fieldset>
+
+        <div class="row2">
+          <div class="field" data-field="ages">
+            <label class="label" for="ages">Ages you serve</label>
+            <input type="text" id="ages" name="ages" maxlength="40" placeholder="e.g. 4 to 12" required>
+            <div class="err">Tell us which ages you serve.</div>
+          </div>
+
+          <div class="field" data-field="area">
+            <label class="label" for="area">Where are you?</label>
+            <select id="area" name="area" required>
+              <option value="">Choose your area</option>
+              <option>Vaughan</option>
+              <option>Richmond Hill</option>
+              <option>Markham</option>
+              <option>King, Aurora or Newmarket</option>
+              <option>Toronto: North York</option>
+              <option>Toronto: Etobicoke</option>
+              <option>Toronto: Scarborough</option>
+              <option>Toronto: Downtown, East York or York</option>
+              <option>Mississauga</option>
+              <option>Brampton</option>
+              <option>Oakville or Burlington</option>
+              <option>Pickering, Ajax or Whitby</option>
+              <option>Multiple locations</option>
+              <option>Online or we travel to families</option>
+            </select>
+            <div class="err">Choose your area.</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="address">Street address <span class="hint">optional if you're online or mobile</span></label>
+          <input type="text" id="address" name="address" maxlength="120" placeholder="e.g. 123 Main St, Unit 4, Woodbridge">
+        </div>
+
+        <h3 class="group-title">How families reach you</h3>
+
+        <div class="row2">
+          <div class="field" data-field="contact">
+            <label class="label" for="contact">Contact person</label>
+            <input type="text" id="contact" name="contact" maxlength="60" autocomplete="name" required>
+            <div class="err">Add a contact name.</div>
+          </div>
+
+          <div class="field" data-field="email">
+            <label class="label" for="email">Email</label>
+            <input type="email" id="email" name="email" maxlength="120" autocomplete="email" inputmode="email" required>
+            <div class="err">Enter an email like name@example.com.</div>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label class="label" for="phone">Phone <span class="hint">optional, but parents call first</span></label>
+            <input type="text" id="phone" name="phone" maxlength="30" inputmode="tel" placeholder="e.g. 905 555 0100">
+          </div>
+
+          <div class="field">
+            <label class="label" for="website">Website or Instagram <span class="hint">optional</span></label>
+            <input type="text" id="website" name="website" maxlength="120" placeholder="e.g. yourstudio.ca">
+          </div>
+        </div>
+
+        <h3 class="group-title">Your classes</h3>
+
+        <div class="field" data-field="programs">
+          <label class="label" for="programs">Programs and prices</label>
+          <textarea id="programs" name="programs" maxlength="1000" placeholder="e.g. Beginner piano, ages 6 to 10 — $130/month for four 30-min lessons. Kinder dance, ages 3 to 5 — $99 for 5 classes." required></textarea>
+          <div class="err">Add at least one program with its price, or write "call for pricing".</div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="schedule">Typical schedule <span class="hint">optional</span></label>
+          <textarea id="schedule" name="schedule" maxlength="500" placeholder="e.g. Weekdays 4 to 8 PM, Saturday mornings. New terms in January and September."></textarea>
+        </div>
+
+        <fieldset class="field">
+          <legend>Do you often have last-minute openings? <span class="hint">optional</span></legend>
+          <p class="hint" style="margin:0 0 10px">Parents sometimes need a class this week. We can send them your way.</p>
+          <div class="checks">
+            <label class="check"><input type="radio" name="lastmin" value="Often"> Often</label>
+            <label class="check"><input type="radio" name="lastmin" value="Sometimes"> Sometimes</label>
+            <label class="check"><input type="radio" name="lastmin" value="Rarely"> Rarely</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label class="label" for="offer">Offer for Yeppiee families <span class="hint">optional</span></label>
+          <input type="text" id="offer" name="offer" maxlength="200" placeholder="e.g. free trial class, 10% off first month, sibling discount">
+        </div>
+
+        <div class="field" data-field="consent">
+          <label class="consent">
+            <input type="checkbox" id="consent" name="consent" value="yes" required>
+            <span>Yeppiee can share these details with parents and contact me about my listing.</span>
+          </label>
+          <div class="err">Please confirm so we can list you.</div>
+        </div>
+
+        <div class="hp" aria-hidden="true">
+          <label for="yp_hp">Leave this empty</label>
+          <input type="text" id="yp_hp" name="yp_hp" tabindex="-1" autocomplete="one-time-code" data-lpignore="true" data-1p-ignore>
+        </div>
+
+        <button class="submit" type="submit" id="submit-btn">Apply to get listed</button>
+        <div class="form-msg" id="form-msg" role="alert"></div>
+      </form>
+
+      <div class="done" id="done" tabindex="-1" aria-live="polite">
+        <div class="badge" aria-hidden="true">
+          <svg width="28" height="22" viewBox="0 0 28 22"><path d="M2 11l8 8L26 3" stroke="#1B2A4A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h2>Application received</h2>
+        <p>Thanks! We'll review it and email <strong id="done-email">you</strong>, usually within 2 business days.</p>
+        <p>Questions in the meantime? Write to <a href="mailto:info@yeppiee.com">info@yeppiee.com</a>.</p>
+        <button class="linkbtn" type="button" id="again-btn">Submit another program</button>
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<section class="privacy" aria-labelledby="privacy-title">
+  <div class="privacy-inner">
+    <h3 id="privacy-title">Good to know</h3>
+    <ul>
+      <li>Listing is free during the pilot, and there's no commission on registrations. If that ever changes, we'll tell you first and you can opt out.</li>
+      <li>We only share what you put in this form: program details, prices, schedule and contact info. Parents contact and pay you directly.</li>
+      <li>We verify details before listing, and may email each season to check your prices and schedule are still right.</li>
+      <li>Want your listing changed or removed? Email <a href="mailto:info@yeppiee.com">info@yeppiee.com</a> anytime.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Yeppiee · Burlington, Ontario</span>
+    <span><a href="/">For parents</a> · <a href="mailto:info@yeppiee.com">info@yeppiee.com</a></span>
+  </div>
+</footer>
+
+<script>
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxG7gaf5GLSBvJ_Blud1DgQjKV5Nj7aLyLn0qo3BT6UJOGlUWRF2uBqSNZSIP1W5sg/exec";
+  // Add ?test to the page address to preview without sending anything.
+  const TEST_MODE = new URLSearchParams(location.search).has("test");
+
+  const CATEGORIES = [
+    ["🎹", "Music lessons", "Music lessons", "lilac"],
+    ["💃", "Dance", "Dance", "pink"],
+    ["🤖", "STEM & coding", "STEM, coding & robotics", "mint"],
+    ["🏊", "Swimming", "Swimming", "sky"],
+    ["⚽", "Soccer", "Soccer", "mint"],
+    ["🏀", "Basketball", "Basketball", "peach"],
+    ["🥋", "Martial arts", "Martial arts", "lilac"],
+    ["🤸", "Gymnastics", "Gymnastics", "pink"],
+    ["⛸️", "Skating & hockey", "Skating & hockey", "sky"],
+    ["🎨", "Art & crafts", "Art & crafts", "peach"],
+    ["🗣️", "Languages", "Languages", "mint"],
+    ["📚", "Tutoring", "Tutoring", "peach"],
+    ["🏕️", "Camps", "Camps", "sky"],
+    ["✨", "Something else", "Other", "lilac"]
+  ];
+
+  const form = document.getElementById("partner-form");
+  const btn = document.getElementById("submit-btn");
+  const msg = document.getElementById("form-msg");
+  const done = document.getElementById("done");
+  const otherBox = document.getElementById("other-box");
+  const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+  const tickSvg = '<svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+
+  document.getElementById("cat-stickers").innerHTML = CATEGORIES.map(([emoji, label, value, color], i) =>
+    '<div class="sticker" style="--c: var(--' + color + ')">' +
+    '<input type="checkbox" id="c' + i + '" value="' + esc(value) + '" data-cat' + (value === "Other" ? " data-other" : "") + '>' +
+    '<label for="c' + i + '"><span class="tick" aria-hidden="true">' + tickSvg + '</span>' +
+    '<span class="emoji" aria-hidden="true">' + emoji + '</span>' + esc(label) + '</label></div>'
+  ).join("");
+
+  const otherToggle = form.querySelector("[data-other]");
+  otherToggle.addEventListener("change", () => {
+    otherBox.classList.toggle("show", otherToggle.checked);
+    if (otherToggle.checked) document.getElementById("other_category").focus();
+  });
+
+  function mark(wrap, bad) {
+    wrap.classList.toggle("invalid", bad);
+    const ctrl = wrap.querySelector("input:not([type=checkbox]), select, textarea");
+    if (ctrl) ctrl.setAttribute("aria-invalid", bad ? "true" : "false");
+  }
+
+  function validate() {
+    const checks = {
+      business: form.business.value.trim().length > 0,
+      categories: form.querySelectorAll("[data-cat]:checked").length > 0,
+      ages: form.ages.value.trim().length > 0,
+      area: form.area.value !== "",
+      contact: form.contact.value.trim().length > 0,
+      email: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.value.trim()),
+      programs: form.programs.value.trim().length > 0,
+      consent: form.consent.checked
+    };
+    const bad = [];
+    Object.keys(checks).forEach((f) => {
+      const wrap = form.querySelector('[data-field="' + f + '"]');
+      mark(wrap, !checks[f]);
+      if (!checks[f]) bad.push(wrap);
+    });
+    return bad;
+  }
+
+  ["input", "change"].forEach((evt) => form.addEventListener(evt, (e) => {
+    const wrap = e.target.closest("[data-field]");
+    if (wrap && wrap.classList.contains("invalid")) validate();
+  }));
+
+  function showMsg(text) {
+    msg.textContent = text;
+    msg.classList.toggle("show", !!text);
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    showMsg("");
+    const bad = validate();
+    if (bad.length) {
+      const ctrl = bad[0].querySelector("input, select, textarea");
+      if (ctrl) ctrl.focus();
+      return;
+    }
+    if (!TEST_MODE && (!SCRIPT_URL || SCRIPT_URL.indexOf("PASTE_") === 0)) {
+      showMsg("This form isn't connected yet. Add the Apps Script URL, or add ?test to the page address to preview.");
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+
+    const data = new URLSearchParams(new FormData(form));
+    data.append("form", "partner");
+    form.querySelectorAll("[data-cat]:checked").forEach((c) => data.append("categories", c.value));
+    data.append("page", location.href);
+
+    try {
+      if (TEST_MODE) {
+        await new Promise((r) => setTimeout(r, 1200));
+        console.log("Test mode: would have sent", Object.fromEntries(data));
+      } else {
+        const res = await fetch(SCRIPT_URL, { method: "POST", body: data });
+        const raw = await res.text();
+        let json = {};
+        try { json = JSON.parse(raw); } catch (err) { console.error("Unexpected reply from server:", raw.slice(0, 500)); }
+        if (!res.ok || json.ok !== true || !json.id) throw new Error(json.error || "Request failed");
+      }
+
+      document.getElementById("done-email").textContent = form.email.value.trim();
+      form.style.display = "none";
+      done.classList.add("show");
+      done.focus();
+    } catch (err) {
+      showMsg("Your application didn't go through. Check your connection and try again, or email info@yeppiee.com.");
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Apply to get listed";
+    }
+  });
+
+  document.getElementById("again-btn").addEventListener("click", () => {
+    const email = form.email.value;
+    const contact = form.contact.value;
+    form.reset();
+    form.email.value = email;
+    form.contact.value = contact;
+    form.consent.checked = false;
+    otherBox.classList.remove("show");
+    done.classList.remove("show");
+    form.style.display = "";
+    form.business.focus();
+  });
+
+  if (TEST_MODE) {
+    const tag = document.createElement("p");
+    tag.textContent = "Test mode: nothing will be sent.";
+    tag.style.cssText = "margin:0 0 16px;padding:8px 12px;border-radius:10px;background:var(--mint);font-weight:600;font-size:14px;";
+    form.prepend(tag);
+  }
+</script>
+</body>
+</html>
